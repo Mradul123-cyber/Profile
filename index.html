@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mradul – Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #f9f9f9, #ececec);
+      color: #222;
+      scroll-behavior: smooth;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.9);
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      z-index: 1000;
+    }
+    header nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    header nav a:hover {
+      color: #0077cc;
+    }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: center;
+    }
+    .hero-text p {
+      margin-top: 15px;
+      line-height: 1.6;
+    }
+    .btn {
+      display: inline-block;
+      padding: 8px 16px;
+      margin-top: 15px;
+      background: #0077cc;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background: #005fa3;
+    }
+    .projects, .skills, .contact {
+      display: grid;
+      gap: 20px;
+    }
+    .project, .skill, .contact-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .tags span {
+      display: inline-block;
+      background: #f0f0f0;
+      border-radius: 4px;
+      padding: 2px 6px;
+      margin: 2px;
+      font-size: 12px;
+    }
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>⚡️ Mradul</strong></div>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a href="Mradul Agrawal.pdf">Resume</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>Hi, I'm Mradul. <span style="opacity:0.8">Student Developer • Coding + JEE Prep</span></h1>
+      <p>Passionate about Physics, Chemistry, and Maths. Preparing for JEE while building modern apps.</p>
+      <a class="btn" href="#projects">See Projects</a>
+    </div>
+    <div style="text-align:center;">
+      <div style="font-size:60px;">⚡️</div>
+      <div style="margin-top:10px;color:#666;font-size:14px;">Clean code • Secure by design • Never give up</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Zarq Website</h3>
+        <p>A creative implementation of an original mathematical concept "Zarq" – a number whose power results in zero.</p>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        <a class="btn" href="https://mradul123-cyber.github.io/ZARQ/" target="_blank">Open</a>
+      </div>
+      <div class="project">
+        <h3>Zarq Messenger (In Progress)</h3>
+        <p>A secure messaging app with end-to-end encryption, groups, and friend requests (currently under development).</p>
+        <div class="tags"><span>Flutter</span><span>Go</span><span>PostgreSQL</span><span>E2EE</span></div>
+      </div>
+      <div class="project">
+        <h3>Constitution Chatbot (India)</h3>
+        <p>Helps people understand rights and actions using articles and laws from the Constitution of India.</p>
+        <div class="tags"><span>HTML</span><span>API</span><span>CSS</span><span>JavaScript</span></div>
+        <a class="btn" href="https://mradul123-cyber.github.io/SamvidhanAI/" target="_blank">Open</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills & Focus</h2>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Java</div>
+      <div class="skill">Flutter</div>
+      <div class="skill">Go (Golang)</div>
+      <div class="skill">PostgreSQL</div>
+      <div class="skill">Firebase Auth + Storage</div>
+      <div class="skill">WebSockets</div>
+      <div class="skill">Cryptography / E2EE</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <div class="contact-card">
+        <strong>Email:</strong><br>
+        <a href="mailto:mradulagrawal48125@gmail.com">mradulagrawal48125@gmail.com</a>
+      </div>
+      <div class="contact-card">
+        <strong>GitHub:</strong><br>
+        <a href="https://github.com/Mradul123-cyber" target="_blank">Mradul123-cyber</a>
+      </div>
+      <div class="contact-card">
+        <strong>LinkedIn:</strong><br>
+        <a href="https://www.linkedin.com/in/mradul-agrawal-a63364329/" target="_blank">Mradul Agrawal</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Mradul. Built with HTML, CSS & JavaScript.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
